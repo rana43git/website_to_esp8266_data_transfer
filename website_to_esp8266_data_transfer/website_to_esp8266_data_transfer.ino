@@ -42,7 +42,7 @@ void loop() {
 // Handle update page
 void handleUpdate() {
   if (server.hasArg("input")) {
-    val_ESP = server.arg("input");
+    val_ESP = server.arg("input"); //Try to get value by input's id "val_ESP = server.arg("alpha");"
     Serial.println("Received input: " + val_ESP);
     server.send(200, "text/plain", "Input received: " + val_ESP);
   } else {
